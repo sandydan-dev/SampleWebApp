@@ -91,10 +91,19 @@ All with **one pipeline execution**.
 ---
 
 ## 📎 Screenshots (Optional)
-- Jenkins Jobs  
-- Build History  
-- JUnit Reports  
-- Tomcat Deployment Status  
+- Jenkins Jobs
+- <img width="1366" height="541" alt="1_jenkins" src="https://github.com/user-attachments/assets/b74ac009-3f00-4be0-b169-1f140132d8ea" />
+
+- Build History
+- <img width="1366" height="475" alt="2_build_pipeline" src="https://github.com/user-attachments/assets/d7d16531-2a2d-46fa-93c3-dcb1abde512c" />
+
+  
+- JUnit Reports
+- <img width="1366" height="531" alt="3_deliver_pipeline" src="https://github.com/user-attachments/assets/ddef670d-c30a-449a-9777-ad66f3202125" />
+
+- Tomcat Deployment Status
+- <img width="1398" height="620" alt="4_build_war_file" src="https://github.com/user-attachments/assets/32976a7b-d833-4bcf-aa72-605c10d4ac26" />
+
 
 ---
 
