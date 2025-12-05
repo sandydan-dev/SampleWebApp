@@ -112,10 +112,8 @@ Feel free to fork this project and improve it!
 
 ---
 
-## 📬 Contact
-For queries, reach out on LinkedIn 😊
 
-
+##  CICD Pipeline
 
                  +-----------------------+
                  |     GitHub Repo       |
@@ -162,6 +160,8 @@ For queries, reach out on LinkedIn 😊
 
 
 
+## 📬 Contact
+For queries, reach out on LinkedIn 😊
 
 
 
