@@ -43,7 +43,6 @@
             animation: fadeIn 1s ease-in-out;
         }
 
-        /* dark overlay */
         .hero::after {
             content: "";
             position: absolute;
@@ -118,12 +117,20 @@
             transition: 0.3s;
         }
 
-        table img {
+        /* ---------------- SIGIL FLOATING ANIMATION ---------------- */
+        .sigil {
             width: 80px;
+            animation: float 3s ease-in-out infinite;
             transition: transform 0.3s;
         }
 
-        table img:hover {
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .sigil:hover {
             transform: scale(1.15);
         }
 
@@ -214,37 +221,37 @@
                 <tr>
                     <td>The North</td>
                     <td>Stark of Winterfell</td>
-                    <td><img src="images/HouseStark.png"></td>
+                    <td><img class="sigil" src="images/HouseStark.png"></td>
                 </tr>
                 <tr>
                     <td>The Isles & Rivers</td>
                     <td>Harren Hoare</td>
-                    <td><img src="images/Harren_Hoare.png"></td>
+                    <td><img class="sigil" src="images/Harren_Hoare.png"></td>
                 </tr>
                 <tr>
                     <td>The Vale</td>
                     <td>Arryn of the Eyrie</td>
-                    <td><img src="images/Arryn.png"></td>
+                    <td><img class="sigil" src="images/Arryn.png"></td>
                 </tr>
                 <tr>
                     <td>The Westernlands</td>
                     <td>Lannister of Casterly Rock</td>
-                    <td><img src="images/Lannister.png"></td>
+                    <td><img class="sigil" src="images/Lannister.png"></td>
                 </tr>
                 <tr>
                     <td>The Stormlands</td>
                     <td>Baratheon of Storm’s End</td>
-                    <td><img src="images/Baratheon.png"></td>
+                    <td><img class="sigil" src="images/Baratheon.png"></td>
                 </tr>
                 <tr>
                     <td>The Riverlands</td>
                     <td>Tully of Riverrun</td>
-                    <td><img src="images/Gardner.png"></td>
+                    <td><img class="sigil" src="images/Gardner.png"></td>
                 </tr>
                 <tr>
                     <td>Dorne</td>
                     <td>Martell of Sunspear</td>
-                    <td><img src="images/Martell.png"></td>
+                    <td><img class="sigil" src="images/Martell.png"></td>
                 </tr>
             </tbody>
         </table>
@@ -258,5 +265,4 @@
     </footer>
 
 </body>
-
 </html>
