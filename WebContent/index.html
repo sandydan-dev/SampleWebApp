@@ -1,190 +1,262 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game of Thrones</title>
 
     <style>
+        /* ---------------- GLOBAL STYLE ---------------- */
         body {
             margin: 0;
             padding: 0;
-            background: #0e0e0e;
-            color: #f1f1f1;
-            font-family: "Segoe UI", Roboto, sans-serif;
-            line-height: 1.7;
+            font-family: "Poppins", sans-serif;
+            background: #0b0b0b;
+            color: #e6e6e6;
+            overflow-x: hidden;
         }
 
-        header {
-            text-align: center;
-            padding: 40px 20px;
-            background: linear-gradient(to bottom right, #1b1b1b, #2d2d2d);
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 42px;
+        h1, h2, h3 {
+            font-family: "Cinzel", serif;
             letter-spacing: 1px;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: auto;
-            padding: 30px 0;
-        }
-
-        img.main-image {
-            width: 100%;
-            border-radius: 10px;
-            margin: 20px 0;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
-        }
-
-        h3 {
-            margin-top: 40px;
-            font-size: 24px;
             color: #d4af37;
-        }
-
-        ul {
-            margin-left: 20px;
-        }
-
-        iframe {
-            margin: 20px 0;
-            width: 100%;
-            max-width: 500px;
-            height: 280px;
-            border-radius: 10px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 25px;
-            background: #1b1b1b;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        table th {
-            background: #d4af37;
-            color: #000;
-            padding: 12px;
-            font-size: 18px;
-        }
-
-        table td {
-            padding: 12px;
-            text-align: center;
-            border-bottom: 1px solid #333;
-        }
-
-        table img {
-            width: 80px;
-            height: 80px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            color: #bbb;
         }
 
         a {
             color: #d4af37;
             text-decoration: none;
         }
+
         a:hover {
-            text-decoration: underline;
+            opacity: 0.7;
+        }
+
+        /* ---------------- HERO SECTION ---------------- */
+        .hero {
+            height: 60vh;
+            background: url("images/GOT.jpg") center/cover no-repeat;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* dark overlay */
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.65);
+        }
+
+        .hero h1 {
+            position: relative;
+            z-index: 2;
+            font-size: 48px;
+            text-align: center;
+            animation: slideDown 1.7s ease;
+        }
+
+        /* ---------------- CONTAINER ---------------- */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            animation: fadeUp 1.5s ease;
+            padding-bottom: 40px;
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        /* ---------------- LIST ---------------- */
+        ul li {
+            margin: 8px 0;
+            font-size: 18px;
+            transition: transform 0.3s;
+        }
+
+        ul li:hover {
+            transform: translateX(6px);
+            color: #d4af37;
+        }
+
+        /* ---------------- TABLE ---------------- */
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            background: #111;
+            border-radius: 10px;
+            overflow: hidden;
+            animation: fadeUp 1.6s ease;
+        }
+
+        th {
+            background: #d4af37;
+            color: #000;
+            padding: 12px;
+            font-size: 18px;
+        }
+
+        td {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #222;
+            font-size: 16px;
+        }
+
+        tbody tr:hover {
+            background: rgba(212, 175, 55, 0.1);
+            transition: 0.3s;
+        }
+
+        table img {
+            width: 80px;
+            transition: transform 0.3s;
+        }
+
+        table img:hover {
+            transform: scale(1.15);
+        }
+
+        /* ---------------- IFRAME ---------------- */
+        iframe {
+            width: 100%;
+            max-width: 450px;
+            height: 260px;
+            border-radius: 10px;
+            margin-top: 20px;
+            animation: fadeIn 2s ease;
+        }
+
+        /* ---------------- FOOTER ---------------- */
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 20px;
+            opacity: 0.7;
+        }
+
+        footer strong {
+            color: #d4af37;
+        }
+
+        /* ---------------- ANIMATIONS ---------------- */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Game of Thrones – Hello There!</h1>
-</header>
+    <!-- HERO SECTION -->
+    <div class="hero" id="top">
+        <h1>GAME OF THRONES</h1>
+    </div>
 
-<div class="container">
-    <img src="images/GOT.jpg" class="main-image" alt="GOT Main Banner">
+    <!-- CONTENT -->
+    <div class="container">
 
-    <p>
-        <strong>Game of Thrones</strong> is an American fantasy drama series created by David Benioff and D. B. Weiss.
-        Based on George R. R. Martin’s novel series <em>A Song of Ice and Fire</em>, it explores power struggles,
-        betrayal, and epic battles between the great houses of Westeros.
-    </p>
+        <p>
+            <strong>Game of Thrones</strong> is an American fantasy drama series created by David Benioff & D. B. Weiss.
+            Based on George R. R. Martin’s novel series <em>A Song of Ice and Fire</em>, it explores war, power, betrayal,
+            honor, and the rise and fall of great houses.
+        </p>
 
-    <h3>General Plot</h3>
-    <p>A story of greed, lust, power, and political warfare — seven kingdoms fighting for domination and the Iron Throne.</p>
+        <h3>General Plot</h3>
+        <p>A ruthless battle for the Iron Throne—filled with greed, lust, loyalty, war, and betrayal.</p>
 
-    <iframe src="https://www.youtube.com/embed/522l0YE9hRQ" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/522l0YE9hRQ" allowfullscreen></iframe>
 
-    <h3>Warring Kingdoms</h3>
-    <ul>
-        <li>Kingdom of the North</li>
-        <li>Kingdom of the Mountain and the Vale</li>
-        <li>Kingdom of the Isles and Rivers</li>
-        <li>Kingdom of the Rock</li>
-        <li>Kingdom of the Stormlands</li>
-        <li>Kingdom of the Reach</li>
-        <li>Principality of Dorne</li>
-    </ul>
+        <h3>Warring Kingdoms</h3>
+        <ul>
+            <li>Kingdom of the North</li>
+            <li>Kingdom of the Mountain and the Vale</li>
+            <li>Kingdom of the Isles and Rivers</li>
+            <li>Kingdom of the Rock</li>
+            <li>Kingdom of the Stormlands</li>
+            <li>Kingdom of the Reach</li>
+            <li>Principality of Dorne</li>
+        </ul>
 
-    <h3>Kingdoms, Lords, and Their Symbols</h3>
-    <table>
-        <thead>
-        <tr>
-            <th>Kingdom</th>
-            <th>Lord / Ruler</th>
-            <th>Sigil</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>The North</td>
-            <td>Stark of Winterfell</td>
-            <td><a href="#"><img src="images/HouseStark.png"></a></td>
-        </tr>
-        <tr>
-            <td>The Isles and Rivers</td>
-            <td>Harren Hoare</td>
-            <td><a href="#"><img src="images/Harren_Hoare.png"></a></td>
-        </tr>
-        <tr>
-            <td>The Vale</td>
-            <td>Arryn of the Eyrie</td>
-            <td><a href="#"><img src="images/Arryn.png"></a></td>
-        </tr>
-        <tr>
-            <td>The Westernlands</td>
-            <td>Lannister of Casterly Rock</td>
-            <td><a href="#"><img src="images/Lannister.png"></a></td>
-        </tr>
-        <tr>
-            <td>The Stormlands</td>
-            <td>Baratheon of Storm’s End</td>
-            <td><a href="#"><img src="images/Baratheon.png"></a></td>
-        </tr>
-        <tr>
-            <td>The Riverlands</td>
-            <td>Tully of Riverrun</td>
-            <td><a href="#"><img src="images/Gardner.png"></a></td>
-        </tr>
-        <tr>
-            <td>Dorne</td>
-            <td>Martell of Sunspear</td>
-            <td><a href="#"><img src="images/Martell.png"></a></td>
-        </tr>
-        </tbody>
-    </table>
-</div>
+        <h3>Kingdoms • Lords • Symbols</h3>
 
-<footer>
-    Dedicated to all <strong>Game of Thrones®</strong> fans — <a href="#top">Back to top</a>
-</footer>
+        <table>
+            <thead>
+                <tr>
+                    <th>Kingdom</th>
+                    <th>Lord / Ruler</th>
+                    <th>Sigil</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>The North</td>
+                    <td>Stark of Winterfell</td>
+                    <td><img src="images/HouseStark.png"></td>
+                </tr>
+                <tr>
+                    <td>The Isles & Rivers</td>
+                    <td>Harren Hoare</td>
+                    <td><img src="images/Harren_Hoare.png"></td>
+                </tr>
+                <tr>
+                    <td>The Vale</td>
+                    <td>Arryn of the Eyrie</td>
+                    <td><img src="images/Arryn.png"></td>
+                </tr>
+                <tr>
+                    <td>The Westernlands</td>
+                    <td>Lannister of Casterly Rock</td>
+                    <td><img src="images/Lannister.png"></td>
+                </tr>
+                <tr>
+                    <td>The Stormlands</td>
+                    <td>Baratheon of Storm’s End</td>
+                    <td><img src="images/Baratheon.png"></td>
+                </tr>
+                <tr>
+                    <td>The Riverlands</td>
+                    <td>Tully of Riverrun</td>
+                    <td><img src="images/Gardner.png"></td>
+                </tr>
+                <tr>
+                    <td>Dorne</td>
+                    <td>Martell of Sunspear</td>
+                    <td><img src="images/Martell.png"></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        Dedicated to all <strong>Game of Thrones®</strong> fans |
+        <a href="#top">Back to Top</a>
+    </footer>
 
 </body>
+
 </html>
